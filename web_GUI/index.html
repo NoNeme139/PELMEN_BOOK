@@ -8,38 +8,35 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div>
-		<form name="publish">
-		  <input type="text" id="textInput" name="message" placeholder="введите сообщение" onchange='eventForm(this.value)'>
-		  <input type="button" id="clearButton" onchange='' value="" placeholder="ввод">
+	<header>
+		<nav>
+			<a href="#">Список книг</a>
+			<a href="#">О нас</a>
+		</nav>
+	</header>
+	<div class="title">
+		<h1 class="title__heading">Добавьте книгу в вашу библиотеку</h1>
+		<p class="title__text">чтобы не забыть и перечитать</p>
+	</div>
+	<div class="input">
+		<form name="addToBooklist">
+			<input type="text" name="title" value="Название книги">
+			<input type="text" name="author" value="Автор книги">
+			<button name="button">Добавить</button>
 		</form>
 	</div>
-		<form action="" method="post">
-
-		</form>
-	  </div>
-
-
-	<script>
-		document.getElementById("clearButton").onclick = function(e) {
-		document.getElementById("textInput").value = "";
-		}
-		
-		function eventForm(value){
-			console.log(value)
-			document.body.onload = addElement(value);
-		}
-
-		var my_div = newDiv = null;
-
-		function addElement(anyText) {
-
-			var newDiv = document.createElement("div");
-				newDiv.innerHTML = "<h1>" + anyText + "</h1>";
-
-			my_div = document.getElementById("org_div1");
-			document.body.insertBefore(newDiv, my_div);
-		}
-
-	</script>
+	<table>
+		<tr>
+			<td>Название</td>
+			<td>Автор</td>
+			<td>Статус</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<footer>Frontend: kawaiianxiety<br>Backend: N139</footer>
+</body>	
 </html>
