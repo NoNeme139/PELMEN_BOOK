@@ -21,3 +21,44 @@ body {
     z-index: -1;
 }
 
+header {
+    height: 8em;
+    color: black;
+    padding: 5%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav a {
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    color: black;
+}
+
+@media screen and (max-width: 768px) {
+    header nav a {
+        font-size: 24px;
+    }
+}
+
+a:active {
+    text-decoration: none;
+    border-bottom: 1.5px black solid;
+}
+
+.title {
+    font-family: 'Merriweather', serif;
+}
+
+.title__heading {
+    font-size: 32px;
+    font-weight: normal;
+    padding-bottom: 11px;
+}
+
+.title__text {
+    font-size: 18px;
+}
