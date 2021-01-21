@@ -14,10 +14,6 @@
 		  <input type="button" id="clearButton" onchange='' value="" placeholder="ввод">
 		</form>
 
-		<form name="texts">
-			<div><h1>Привет!</h1></div>
-			<div id='org_div1'>Текст выше сгенерирован автоматически.</div>
-		</form>
 	  </div>
 
 
@@ -31,21 +27,17 @@
 			document.body.onload = addElement(value);
 		}
 
-		
 		var my_div = newDiv = null;
 
-		function addElement(value) {
-
-			// Создаем новый элемент div
-			// и добавляем в него немного контента
+		function addElement(anyText) {
 
 			var newDiv = document.createElement("div");
-				newDiv.innerHTML = "<h1>"+value+"</h1>";
-
-			// Добавляем только что созданый элемент в дерево DOM
+				newDiv.innerHTML = "<h1>" + anyText + "</h1>";
 
 			my_div = document.getElementById("org_div1");
 			document.body.insertBefore(newDiv, my_div);
 		}
+
+
 	</script>
 </html>
