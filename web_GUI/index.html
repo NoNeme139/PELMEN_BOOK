@@ -8,15 +8,20 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-		<div><h1>Привет!</h1></div>
-		<div><input type="text" id="input-id"></div>
-		<div id='org_div1'>Текст выше сгенерирован автоматически.</div>
-</body>	
+	<div>
+		<form name="publish">
+		  <input type="text" name="message" placeholder="введите сообщение" onchange='eventForm(this.value)'>
+		</form>
+	  </div>
+
+
 		<script>
-			var nay_text
-			document.getElementById("input-id").nay_text;
-			console.log(nay_text)
-			
+			function eventForm(value) {
+			if (value == 'test') {
+				console.log(value)
+				}
+			}
+
 		//  document.body.onload = addElement;
 		//  var my_div = newDiv = null;
 		
@@ -33,5 +38,5 @@
 		//	my_div = document.getElementById("org_div1");
 		//	document.body.insertBefore(newDiv, my_div);
 		//}
-		</script>
+		</script></body>	
 </html>
