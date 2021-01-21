@@ -42,27 +42,5 @@
 
 	<footer>Frontend: kawaiianxiety<br>Backend: N139</footer>
 </body>	
-<script>
-		document.getElementById("clearButton").onclick = function(e) {
-		document.getElementById("textInput").value = "";
-		}
-		
-		function eventForm(value){
-			console.log(value)
-			document.body.onload = addElement(value);
-		}
-
-		var my_div = newDiv = null;
-
-		function addElement(anyText) {
-
-			var newDiv = document.createElement("div", id="text");
-				newDiv.innerHTML = "<h1>" + anyText + "</h1>";
-
-			my_div = document.getElementById("org_div1");
-			document.body.insertBefore(newDiv, my_div);
-		}
-	
-	</script>
-</script>
+<script src="web_GUI/main.js"></script>
 </html>
