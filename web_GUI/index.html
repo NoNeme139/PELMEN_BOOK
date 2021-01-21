@@ -8,12 +8,26 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="fruits"></div>
-<div class="fruits"></div>
-<div class="fruits"></div>
-	<script>
-		var arr = ['яблоко','груша','апельсин'];
-		$(".fruits").text((i)=>arr[i]);	
-	</script>
+		<div><h1>Привет!</h1></div>
+		<div id='org_div1'>Текст выше сгенерирован автоматически.</div>
 </body>
+		
+		<script>
+		  document.body.onload = addElement;
+		  var my_div = newDiv = null;
+		
+		  function addElement() {
+		
+			// Создаем новый элемент div
+			// и добавляем в него немного контента
+		
+			var newDiv = document.createElement("div");
+				newDiv.innerHTML = "<h1>Привет!</h1>";
+		
+			// Добавляем только что созданый элемент в дерево DOM
+		
+			my_div = document.getElementById("org_div1");
+			document.body.insertBefore(newDiv, my_div);
+		  }
+		</script>
 </html>
