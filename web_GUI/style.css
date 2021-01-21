@@ -13,4 +13,11 @@ body {
 	position: relative;
 }
 
-.gradient
+.gradient {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to bottom, #FFFFFF 20.24%, rgba(255, 255, 255, 0) 100%);
+    z-index: -1;
+}
+
