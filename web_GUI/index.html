@@ -25,7 +25,7 @@
 		<form name="addToBooklist">
 			<input type="text" name="title" placeholder="Название книги" id="nameBock" onchange='eventForm(this.value)'>
 			<input type="text" name="author" placeholder="Автор книги" id="autorBock" onchange='eventForm(this.value)'>
-			<button name="button"> Добавить</button>
+			<input type="button" id="clearButton" onchange='' value="Добавить" placeholder="ввод">
 		</form>
 	</div>
 	<table>
@@ -42,28 +42,5 @@
 	</table>
 	<footer>Frontend: kawaiianxiety<br>Backend: N139</footer>
 </body>	
-
-<script>
-	document.getElementById("clearButton").onclick = function(nameBock, autorBock) {
-	document.getElementById("nameBock").nameBock = this.nameBock
-	document.getElementById("autorBock").autorBock = this.autorBock
-	}
-	
-	function eventForm(value){
-		console.log(value)
-		//document.body.onload = addElement(value);
-	}
-
-	var my_div = newDiv = null;
-
-	function addElement(anyText) {
-
-		var newDiv = document.createElement("div", id="text");
-			newDiv.innerHTML = "<h1>" + anyText + "</h1>";
-
-		my_div = document.getElementById("org_div1");
-		document.body.insertBefore(newDiv, my_div);
-	}
-
-</script>
+<script src="main.js"></script>
 </html>
