@@ -1,16 +1,16 @@
-let myLibrary = [];
+let myLibrary = []; // Массив
 
-function book(name="", autor="", pages=12) {
-	this.name = name
+function book(name="", autor="", pages=12) { // Прототип для создания обьекта
+	this.name = name // Параметр обьекта
 	this.autor = autor
 	this.pages = pages
-	this.read = false
+	this.read = false // Параметр обьекта
 
-	this.read = function(read) {
+	this.read = function(read) { // Функция обьекта для изменения параметра
 		this.read = read
 	}
 
-	this.info = function(name, autor, pages){
+	this.info = function(name, autor, pages){ // Функция для вывода информации кникги
 		if (this.read === true){
 			console.log("Название книги:" + this.name + ", Автор:" + this.autor + ", страниц:" + this.pages + ", книга прочитанна")
 		}
@@ -20,6 +20,6 @@ function book(name="", autor="", pages=12) {
 	}
 }
 
-function addMyBookTolibrary(anyBookObt){
+function addMyBookTolibrary(anyBookObt){ // Функция которая не работает БЛЯТЬ
 	myLibrary.push(anyBookObt)
 }
