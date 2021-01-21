@@ -23,3 +23,6 @@ function book(name="", autor="", pages=12) { // Прототип для созд
 function addMyBookTolibrary(anyBookObt){ // Функция которая не работает БЛЯТЬ
 	myLibrary.push(anyBookObt)
 }
+
+let book1 = new book("NAME BOOK", "AUTOR BOOK", 45)
+addMyBookTolibrary(book1)
