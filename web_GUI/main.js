@@ -1,5 +1,5 @@
 
-document.getElementById("clearButton").onclick = function(e) {
+document.getElementById("clearButton").onclick = function() {
 	nameBook = document.getElementById("nameBock").value 
 	autorBook = document.getElementById("autorBock").value
 
@@ -7,14 +7,14 @@ document.getElementById("clearButton").onclick = function(e) {
 	document.getElementById("autorBock").value = "";
 	
 	console.log(nameBook + " " + autorBook)
-
 	addElement(nameBook + " " + autorBook)
+	document.body.onload = addElement(value);
 }
 
 
 function eventForm(value){
 	console.log("CORRECT " + value)
-	//document.body.onload = addElement(value);
+	
 }
 
 var my_div = newDiv = null;
@@ -22,7 +22,7 @@ var my_div = newDiv = null;
 function addElement(anyText) {
 
 	var newDiv = document.createElement("div");
-		newDiv.innerHTML = "<h1>" + anyText + "</h1>";
+		newDiv.innerHTML = "<h2>" + anyText + "</h2>";
 
 	my_div = document.getElementById("org_div1");
 	document.body.insertBefore(newDiv, my_div);
