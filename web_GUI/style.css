@@ -14,7 +14,8 @@ body {
 	background-size: cover;
 	background-position: center;
 	text-align: center;
-	position: relative;
+    position: relative;
+    min-height: 100vh;
 }
 
 .gradient {
@@ -27,8 +28,9 @@ body {
 
 header {
     height: 8em;
+    width: 100%;
     color: black;
-    padding: 5%;
+    padding: 5% 0;
 }
 
 @media screen and (min-width: 1260px) {
@@ -48,7 +50,7 @@ header nav a {
     color: black;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     header nav a {
         font-size: 24px;
     }
@@ -61,6 +63,7 @@ a:active {
 
 .title {
     font-family: 'Merriweather', serif;
+    width: 100%;
 }
 
 .title__heading {
@@ -68,9 +71,10 @@ a:active {
     padding-bottom: 11px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .title__heading {
         font-size: 48px;
+        padding: 0 3%;
     }
 }
 
@@ -85,7 +89,7 @@ a:active {
     padding-bottom: 84px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .title__text {
         font-size: 32px;
     }
@@ -101,6 +105,8 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    padding-bottom: 5%;
 }
 
 .input__text {
@@ -112,7 +118,7 @@ form {
     border-radius: 25px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .input__text {
         width: 550px;
         height: 90px;
@@ -130,7 +136,7 @@ form {
     margin-bottom: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .input__button {
         width: 260px;
         height: 64px;
@@ -140,3 +146,32 @@ form {
 }
 
 /*Table*/
+table {
+    width: 90%;
+    border-collapse: collapse;
+    border-radius: 25px;
+    background-color: white;
+    margin: auto;
+    table-layout: fixed;
+    text-align: left;
+}
+
+table td {
+    padding: 12px 16px;
+}
+
+table thead tr {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+table tbody tr:hover {
+    background: #e8f6ff;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0;
+    flex-shrink: 0;
+    font-family: 'Merriweather', serif;
+}
