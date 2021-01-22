@@ -28,7 +28,6 @@ function addElement(anyText) {
 	document.body.insertBefore(newDiv, my_div);
 }
 
-
 // - - - //
 
 function book(name="", autor="", pages=12) { // Прототип для создания обьекта
