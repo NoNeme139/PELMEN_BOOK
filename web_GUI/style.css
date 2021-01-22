@@ -21,16 +21,16 @@ body {
     z-index: -1;
 }
 
-.blur {
-    background-size: cover;
-    filter: blur(15px);
-}
-
 header {
     height: 8em;
     color: black;
     padding: 5%;
 }
+
+@media screen and (min-width: 1260px) {
+    header {
+        height: 7em;
+    }
 
 header nav {
     display: flex;
@@ -63,7 +63,31 @@ a:active {
     padding-bottom: 11px;
 }
 
+@media screen and (max-width: 768px) {
+    .title__heading {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 1260px) {
+    .title__heading {
+        font-size: 56px;
+    }
+}
+
 .title__text {
     font-size: 18px;
     padding-bottom: 84px;
+}
+
+@media screen and (max-width: 768px) {
+    .title__text {
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 1260px) {
+    .title__text {
+        font-size: 36px;
+    }
 }
