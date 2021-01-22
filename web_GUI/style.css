@@ -56,7 +56,7 @@ header nav a {
 
 a:active {
     text-decoration: none;
-    border-bottom: 1.5px black solid;
+    border-bottom: 1px black solid;
 }
 
 .title {
@@ -103,7 +103,7 @@ form {
     align-items: center;
 }
 
-input {
+.input__text {
     width: 300px;
     height: 56px;
     margin-bottom: 20px;
@@ -112,8 +112,31 @@ input {
     border-radius: 25px;
 }
 
-#addButton {
-    width: 150px;
-    height: 43px;
+@media screen and (max-width: 768px) {
+    .input__text {
+        width: 550px;
+        height: 90px;
+    }
 }
 
+.input__button {
+    width: 150px;
+    height: 42px;
+    border: 1px white solid;
+    color: white;
+    font-size: 18px;
+    font-family: 'Merriweather', serif;
+    background: transparent;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .input__button {
+        width: 260px;
+        height: 64px;
+        font-size: 32px;
+        border: 2px white solid;
+    }
+}
+
+/*Table*/
