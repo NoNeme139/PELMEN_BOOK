@@ -1,31 +1,39 @@
 
 document.getElementById("clearButton").onclick = function() {
-	nameBook = document.getElementById("nameBock").value 
-	autorBook = document.getElementById("autorBock").value
+	nameBook = document.getElementById("nameBock").value // передача данных из поля ввода имя книга в переменную nameBook
+	autorBook = document.getElementById("autorBock").value // передача данных из поля ввода имя книга в переменную 
 
-	document.getElementById("nameBock").value = "";
-	document.getElementById("autorBock").value = "";
+	document.getElementById("nameBock").value = ""; // очистить значения в поле ввода названия книги
+	document.getElementById("autorBock").value = ""; // очистить значения в поле ввода автора книги
 	
-	console.log(nameBook + " " + autorBook)
-	addElement(nameBook + " " + autorBook)
-	document.body.onload = addElement(value);
+	console.log(nameBook + " " + autorBook) // запись в логи
+	addElement(nameBook, autorBook)
+	// document.body.onload = addElement(value);
 }
 
-
-function eventForm(value){
+function eventForm(value){ // Логи
 	console.log("CORRECT " + value)
-	
 }
 
-var my_div = newDiv = null;
+function addElement(nameBook, autorBook) { // Функция вызывающаяя функции для добавления обьектов
+	addNameBook(nameBook) // Добавления имени
+	addAutorBook(autorBook)	// Добавление автора
+}
 
-function addElement(anyText) {
+function addNameBook(nameBook){ // Функция добавления имени 
+	let p = document.createElement('div');
 
-	var newDiv = document.createElement("div");
-		newDiv.innerHTML = "<h2>" + anyText + "</h2>";
+	let name_Book_in_html = document.querySelector('#nameBook')
+	p.innerHTML = nameBook;
+	name_Book_in_html.appendChild(p)
+}
 
-	my_div = document.getElementById("org_div1");
-	document.body.insertBefore(newDiv, my_div);
+function addAutorBook(autorBook){ // Функция добавления автора
+	let p = document.createElement('div');
+	
+	let autor_Book_in_html = document.querySelector('#autorBook')
+	p.innerHTML = autorBook
+	autor_Book_in_html.appendChild(p)
 }
 
 // - - - //
