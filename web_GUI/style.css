@@ -21,6 +21,11 @@ body {
     z-index: -1;
 }
 
+.blur {
+    background-size: cover;
+    filter: blur(15px);
+}
+
 header {
     height: 8em;
     color: black;
@@ -55,10 +60,10 @@ a:active {
 
 .title__heading {
     font-size: 32px;
-    font-weight: normal;
     padding-bottom: 11px;
 }
 
 .title__text {
     font-size: 18px;
+    padding-bottom: 84px;
 }
