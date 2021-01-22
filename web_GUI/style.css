@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+*:focus {
+    outline: none;
+}
+
 body {
     background-image: url(img/back.jpg);
 	background-size: cover;
@@ -31,6 +35,7 @@ header {
     header {
         height: 7em;
     }
+}
 
 header nav {
     display: flex;
@@ -91,3 +96,24 @@ a:active {
         font-size: 36px;
     }
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 300px;
+    height: 56px;
+    margin-bottom: 20px;
+    border: 0;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+#addButton {
+    width: 150px;
+    height: 43px;
+}
+
