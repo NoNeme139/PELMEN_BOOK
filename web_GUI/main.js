@@ -4,7 +4,7 @@ let id_input=0
 document.getElementById("clearButton").onclick = function() {
 	nameBook = document.getElementById("nameBock").value // передача данных из поля ввода имя книга в переменную nameBook
 	autorBook = document.getElementById("autorBock").value // передача данных из поля ввода имя книга в переменную 
-	statusBook = (document.getElementById("statusBook").value === "") 
+	statusBook = document.getElementById("statusBook").value
 
 	document.getElementById("nameBock").value = ""; // очистить значения в поле ввода названия книги
 	document.getElementById("autorBock").value = ""; // очистить значения в поле ввода автора книги
