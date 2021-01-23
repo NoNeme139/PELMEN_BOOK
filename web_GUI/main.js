@@ -4,7 +4,7 @@ let id_input=0
 document.getElementById("clearButton").onclick = function() {
 	nameBook = document.getElementById("nameBock").value // передача данных из поля ввода имя книга в переменную nameBook
 	autorBook = document.getElementById("autorBock").value // передача данных из поля ввода имя книга в переменную 
-	statusBook = document.getElementById("statusBook").value
+	statusBook = (document.getElementById("statusBook").value=== "on")
 
 	document.getElementById("nameBock").value = ""; // очистить значения в поле ввода названия книги
 	document.getElementById("autorBock").value = ""; // очистить значения в поле ввода автора книги
@@ -23,7 +23,7 @@ function eventForm(value){ // Логи
 function addElement(nameBook, autorBook, statusBook) { // Функция вызывающаяя функции для добавления обьектов
 	addNameBook(nameBook) // Добавления имени
 	addAutorBook(autorBook)	// Добавление автора
-	addstatusBook()
+	addstatusBook(statusBook)
 
 }
 
@@ -43,11 +43,12 @@ function addAutorBook(autorBook){ // Функция добавления авт�
 	autor_Book_in_html.appendChild(p)
 }
 
-function addstatusBook(){
+function addstatusBook(statusBook){
 	let p = document.createElement('div');
 	
 	let autor_Book_in_html = document.querySelector('#tableStatusBook')
-	p.innerHTML = "БЛЯ"
+
+	p.innerHTML = statusBook
 	autor_Book_in_html.appendChild(p)
 }
 // - - - //
