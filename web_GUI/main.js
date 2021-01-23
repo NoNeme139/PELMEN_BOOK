@@ -1,3 +1,5 @@
+let id_input=0
+
 
 document.getElementById("clearButton").onclick = function() {
 	nameBook = document.getElementById("nameBock").value // передача данных из поля ввода имя книга в переменную nameBook
@@ -18,6 +20,7 @@ function eventForm(value){ // Логи
 function addElement(nameBook, autorBook) { // Функция вызывающаяя функции для добавления обьектов
 	addNameBook(nameBook) // Добавления имени
 	addAutorBook(autorBook)	// Добавление автора
+	statusBook()
 }
 
 function addNameBook(nameBook){ // Функция добавления имени 
@@ -36,6 +39,13 @@ function addAutorBook(autorBook){ // Функция добавления авт�
 	autor_Book_in_html.appendChild(p)
 }
 
+function statusBook(){
+	let p = document.createElement('div');
+	
+	let autor_Book_in_html = document.querySelector('#statusBook')
+	p.innerHTML = 'Прочитан: <input type="checkbox" id="'+ id_input +'"></iput>'
+	autor_Book_in_html.appendChild(p)
+}
 // - - - //
 
 function book(name="", autor="", pages=12) { // Прототип для создания обьекта
