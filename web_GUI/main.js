@@ -30,7 +30,7 @@ function addElement(nameBook, autorBook, statusBook) { // Функция выз�
 function addNameBook(nameBook){ // Функция добавления имени 
 	let p = document.createElement('div');
 
-	let name_Book_in_html = document.querySelector('#nameBook')
+	let name_Book_in_html = document.querySelector('#tableNameBook')
 	p.innerHTML = nameBook;
 	name_Book_in_html.appendChild(p)
 }
@@ -38,7 +38,7 @@ function addNameBook(nameBook){ // Функция добавления имен�
 function addAutorBook(autorBook){ // Функция добавления автора
 	let p = document.createElement('div');
 	
-	let autor_Book_in_html = document.querySelector('#autorBook')
+	let autor_Book_in_html = document.querySelector('#tableAutorBook')
 	p.innerHTML = autorBook
 	autor_Book_in_html.appendChild(p)
 }
@@ -46,7 +46,7 @@ function addAutorBook(autorBook){ // Функция добавления авт�
 function addstatusBook(){
 	let p = document.createElement('div');
 	
-	let autor_Book_in_html = document.querySelector('#statusBook')
+	let autor_Book_in_html = document.querySelector('#tableStatusBook')
 	p.innerHTML = "БЛЯ"
 	autor_Book_in_html.appendChild(p)
 }
