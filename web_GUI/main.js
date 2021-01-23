@@ -4,12 +4,15 @@ let id_input=0
 document.getElementById("clearButton").onclick = function() {
 	nameBook = document.getElementById("nameBock").value // передача данных из поля ввода имя книга в переменную nameBook
 	autorBook = document.getElementById("autorBock").value // передача данных из поля ввода имя книга в переменную 
+	statusBook = (document.getElementById("statusBook").value === "") 
 
 	document.getElementById("nameBock").value = ""; // очистить значения в поле ввода названия книги
 	document.getElementById("autorBock").value = ""; // очистить значения в поле ввода автора книги
-	
-	console.log(nameBook + " " + autorBook) // запись в логи
-	addElement(nameBook, autorBook)
+	document.getElementById("statusBook").value = ""
+	console.log("Name: "+ nameBook + "| Autor: " + autorBook + "| checkbox: " + statusBook) // запись в логи
+	//if ((nameBook !== "")  & (autorBook !== "")){
+	addElement(nameBook, autorBook, statusBook)
+	//}
 	// document.body.onload = addElement(value);
 }
 
@@ -17,10 +20,11 @@ function eventForm(value){ // Логи
 	console.log("CORRECT " + value)
 }
 
-function addElement(nameBook, autorBook) { // Функция вызывающаяя функции для добавления обьектов
+function addElement(nameBook, autorBook, statusBook) { // Функция вызывающаяя функции для добавления обьектов
 	addNameBook(nameBook) // Добавления имени
 	addAutorBook(autorBook)	// Добавление автора
-	statusBook()
+	addstatusBook()
+
 }
 
 function addNameBook(nameBook){ // Функция добавления имени 
@@ -39,20 +43,20 @@ function addAutorBook(autorBook){ // Функция добавления авт�
 	autor_Book_in_html.appendChild(p)
 }
 
-function statusBook(){
+function addstatusBook(){
 	let p = document.createElement('div');
 	
 	let autor_Book_in_html = document.querySelector('#statusBook')
-	p.innerHTML = 'Прочитан: <input type="checkbox" id="'+ id_input +'"></iput>'
+	p.innerHTML = "БЛЯ"
 	autor_Book_in_html.appendChild(p)
 }
 // - - - //
 
-function book(name="", autor="", pages=12) { // Прототип для создания обьекта
+function book(name="", autor="", read=false, pages=12) { // Прототип для создания обьекта
 	this.name = name // Параметр обьекта
 	this.autor = autor
 	this.pages = pages
-	this.read = false // Параметр обьекта
+	this.read = read // Параметр обьекта
 
 	this.read = function(read) { // Функция обьекта для изменения параметра
 		this.read = read
