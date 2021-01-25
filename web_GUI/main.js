@@ -2,13 +2,19 @@ let id_input=0
 
 
 document.getElementById("clearButton").onclick = function() {
-	nameBook = document.getElementById("nameBock").value // передача данных из поля ввода имя книга в переменную nameBook
-	autorBook = document.getElementById("autorBock").value // передача данных из поля ввода имя книга в переменную 
-	statusBook = (document.getElementById("statusBook").value=== "on")
 
-	document.getElementById("nameBock").value = ""; // очистить значения в поле ввода названия книги
-	document.getElementById("autorBock").value = ""; // очистить значения в поле ввода автора книги
-	document.getElementById("statusBook").value = ""
+	var nameBookElement = document.getElementById('nameBock')
+	var nameBook = nameBookElement.value
+	nameBookElement.value = ''
+
+	var autorBookElement = document.getElementById("autorBock")
+	var autorBook = autorBookElement.value
+	autorBookElement.value = "";
+
+	var statusBookElement = document.getElementById("statusBook")
+	var statusBook = statusBookElement.value
+	statusBookElement.value = "0"	
+
 	console.log("Name: "+ nameBook + "| Autor: " + autorBook + "| checkbox: " + statusBook) // запись в логи
 	//if ((nameBook !== "")  & (autorBook !== "")){
 	addElement(nameBook, autorBook, statusBook)
